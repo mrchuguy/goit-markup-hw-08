@@ -1,10 +1,20 @@
 .clients__list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: $indent;
 }
 .clients__item {
-	flex-basis: calc((100% - 30px) / 2);
+	@include flex-basis-calc($indent, $row-items);
+
+	@media screen and (min-width: $bp-tablet) {
+		$row-items: 3;
+		@include flex-basis-calc($indent, $row-items);
+	}
+
+	@media screen and (min-width: $bp-desktop) {
+		$row-items: 6;
+		@include flex-basis-calc($indent, $row-items);
+	}
 }
 .clients__link {
 	border: 1px solid $client-icon-cl;

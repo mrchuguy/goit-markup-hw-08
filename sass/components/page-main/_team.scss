@@ -3,14 +3,32 @@
 }
 .team__list {
 	margin: 0 auto;
+
+	@media screen and (min-width: $bp-tablet) {
+		display: flex;
+		gap: $indent;
+		flex-wrap: wrap;
+	}
 }
 .team__item {
 	background: $white;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 	padding-bottom: 24px;
-	&:not(:last-child) {
-		margin-bottom: 30px;
+
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: $bp-tablet) {
+		@include flex-basis-calc($indent, $row-items);
+	}
+
+	@media screen and (min-width: $bp-desktop) {
+		$row-items: 4;
+		@include flex-basis-calc($indent, $row-items);
 	}
 }
 .team__name {

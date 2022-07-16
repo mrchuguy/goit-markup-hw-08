@@ -1,6 +1,10 @@
 .section {
 	padding: 60px 0;
 	width: 100%;
+
+	@media screen and (min-width: $bp-desktop) {
+		padding: 90px 0;
+	}
 }
 .section__title {
 	font-weight: 700;

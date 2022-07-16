@@ -1,13 +1,30 @@
 .cardset {
-	display: flex;
-	flex-wrap: wrap;
 	margin-top: 50px;
-	gap: 30px;
 	list-style-type: none;
+
+	@media screen and (min-width: $bp-tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: $indent;
+	}
 }
 .cardset__item {
-	flex-basis: 370px;
-	max-width: 370px;
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		&:not(:first-child) {
+			margin-top: $indent;
+		}
+	}
+
+	@media screen and (min-width: $bp-tablet) {
+		$row-items: 2;
+		@include flex-basis-calc($indent, $row-items);
+		align-self: stretch;
+	}
+
+	@media screen and (min-width: $bp-desktop) {
+		$row-items: 3;
+		@include flex-basis-calc($indent, $row-items);
+	}
 }
 .cardset__link {
 	display: block;

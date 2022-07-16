@@ -6,7 +6,12 @@
 	background-color: #c4c4c4;
 	padding: 118px 0;
 	max-width: 1600px;
+
+	@media screen and (min-width: $bp-desktop) {
+		padding: 200px 0;
+	}
 }
+
 .hero-section__title {
 	font-weight: 900;
 	font-size: 26px;
@@ -16,4 +21,11 @@
 	text-transform: uppercase;
 	color: $white;
 	margin: 0 auto;
+	max-width: 360px;
+
+	@media screen and (min-width: $bp-desktop) {
+		max-width: 696px;
+		font-size: 44px;
+		line-height: 1.36;
+	}
 }

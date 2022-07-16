@@ -1,6 +1,25 @@
+.peculiarities__list {
+	@media screen and (min-width: $bp-tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: $indent;
+	}
+}
+
 .peculiarities__item {
-	&:not(:last-child) {
-		margin-bottom: 30px;
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		&:not(:last-child) {
+			margin-bottom: $indent;
+		}
+	}
+
+	@media screen and (min-width: $bp-tablet) {
+		@include flex-basis-calc($indent, $row-items);
+	}
+
+	@media screen and (min-width: $bp-desktop) {
+		$row-items: 4;
+		@include flex-basis-calc($indent, $row-items);
 	}
 }
 .peculiarities__icon-wrap {
@@ -15,8 +34,11 @@
 	font-size: 14px;
 	line-height: 1.15;
 	text-transform: uppercase;
-	text-align: center;
 	margin-top: 30px;
+
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		text-align: center;
+	}
 }
 .peculiarities__text {
 	font-size: 14px;

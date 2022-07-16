@@ -1,10 +1,15 @@
 .logo {
 	font-family: $logo-font;
 	font-weight: 700;
-	font-size: 26px;
-	line-height: 1.19;
+	font-size: 24px;
+	line-height: 1.17;
 	color: $main-text-color;
 	text-decoration: none;
+
+	@media screen and (min-width: $bp-desktop) {
+		font-size: 26px;
+		line-height: 1.19;
+	}
 }
 .logo--accent {
 	color: $hover-link-color;

@@ -1,0 +1,3 @@
+@mixin flex-basis-calc($indent, $amount-items) {
+	flex-basis: calc((100% - $indent * ($amount-items - 1)) / $amount-items);
+}
