@@ -1,0 +1,32 @@
+/* social-list */
+.social-list {
+	display: flex;
+	width: 206px;
+	list-style-type: none;
+	gap: 10px;
+}
+.social-list__link {
+	display: block;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	padding: 12px;
+	outline: none;
+	transition: background-color $anim-dur $anim-func;
+	&:hover,
+	&:focus {
+		background-color: $hover-link-color;
+	}
+}
+
+.social-list__icon {
+	fill: $client-icon-cl;
+	transition: fill $anim-dur $anim-func;
+
+	.social-list__link:hover &,
+	.social-list__link:focus & {
+		fill: $white;
+	}
+}
+.social-list__icon--white {
+	fill: $white;
+}

@@ -1,0 +1,29 @@
+.peculiarities {
+	padding-bottom: 0;
+}
+.peculiarities__list {
+	display: flex;
+	gap: 30px;
+}
+.peculiarities__item {
+	flex-basis: 270px;
+	padding-bottom: 3px;
+}
+.peculiarities__icon-wrap {
+	padding: 25px 100px;
+	background: $light-grey-bg;
+	border-radius: 4px;
+}
+.peculiarities__title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.15;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+.peculiarities__text {
+	font-size: 14px;
+	line-height: 1.71;
+	color: $grey-text-color;
+	margin-top: 10px;
+}

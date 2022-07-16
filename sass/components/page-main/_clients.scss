@@ -1,0 +1,29 @@
+.clients__list {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+.clients__link {
+	border: 1px solid $client-icon-cl;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	padding: 15px 31px;
+	transition: border-color $anim-dur $anim-func;
+
+	&:hover,
+	&:focus {
+		border-color: $hover-link-color;
+	}
+}
+.clients__icon {
+	fill: $client-icon-cl;
+	transition: fill $anim-dur $anim-func;
+
+	.clients__link:hover &,
+	.clients__link:focus & {
+		fill: $hover-link-color;
+	}
+}

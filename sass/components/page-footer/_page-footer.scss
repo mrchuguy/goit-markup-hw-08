@@ -1,0 +1,23 @@
+.page-footer {
+	background: $dark-bg;
+	padding: 60px 0;
+}
+.page-footer__container {
+	display: flex;
+	align-items: flex-start;
+}
+.page-footer__logo {
+	color: $white;
+}
+.page-footer__social-wrap {
+	padding-top: 12px;
+	margin-left: 70px;
+}
+.page-footer__title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: $white;
+	margin-bottom: 20px;
+}

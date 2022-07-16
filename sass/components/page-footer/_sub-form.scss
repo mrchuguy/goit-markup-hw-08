@@ -1,0 +1,38 @@
+.sub-form {
+	display: block;
+	padding-top: 12px;
+	margin-left: 93px;
+}
+.sub-form__title {
+	display: block;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: $white;
+	margin-bottom: 20px;
+}
+.sub-form__input-wrap {
+	display: flex;
+	align-items: center;
+}
+.sub-form__input {
+	width: 358px;
+	padding: 15px 16px;
+	background-color: $dark-bg;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+	outline: none;
+	color: $white;
+	transition: border-color $anim-dur $anim-func;
+
+	&::placeholder {
+		color: rgba(255, 255, 255, 0.6);
+		letter-spacing: 0.03em;
+	}
+	&:hover,
+	&:focus {
+		border-color: $hover-link-color;
+	}
+}

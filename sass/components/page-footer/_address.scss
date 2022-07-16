@@ -1,0 +1,19 @@
+.address {
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	margin-top: 20px;
+}
+.address__item {
+	max-height: 21px;
+
+	&:not(:first-child) {
+		margin-top: 9px;
+	}
+}
+.address__link {
+	color: rgba(255, 255, 255, 0.6);
+}
+.address__link--white {
+	color: $white;
+}

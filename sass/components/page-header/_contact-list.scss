@@ -1,0 +1,20 @@
+.contact-list {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
+	list-style-type: none;
+}
+.contact-list__icon {
+	margin-right: 10px;
+	fill: currentColor;
+	transition: fill $anim-dur $anim-func;
+}
+.contact-list__link {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: $grey-text-color;
+}

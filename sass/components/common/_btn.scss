@@ -1,0 +1,33 @@
+.btn {
+	display: block;
+	cursor: pointer;
+	background-color: $hover-link-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border: none;
+	border-radius: 4px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: $white;
+	transition: background-color $anim-dur $anim-func;
+
+	&:hover,
+	&:focus {
+		background-color: $hover-btn;
+	}
+}
+.hero-section__btn {
+	padding: 10px 32px;
+	margin: 30px auto 0;
+}
+.sub-form__btn {
+	padding: 10px 28px 10px 29px;
+	margin-left: 12px;
+	display: flex;
+	align-items: center;
+}
+.btn__desc--left {
+	margin-right: 10px;
+}
