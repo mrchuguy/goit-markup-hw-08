@@ -1,0 +1,10 @@
+.link {
+	color: $main-text-color;
+	outline: none;
+	text-decoration: none;
+	transition: color $anim-dur $anim-func;
+	&:hover,
+	&:focus {
+		color: $hover-link-color;
+	}
+}

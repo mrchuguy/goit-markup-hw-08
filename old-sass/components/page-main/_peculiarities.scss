@@ -1,12 +1,16 @@
+.peculiarities {
+	padding-bottom: 0;
+}
+.peculiarities__list {
+	display: flex;
+	gap: 30px;
+}
 .peculiarities__item {
-	&:not(:last-child) {
-		margin-bottom: 30px;
-	}
+	flex-basis: 270px;
+	padding-bottom: 3px;
 }
 .peculiarities__icon-wrap {
-	display: flex;
-	justify-content: center;
-	padding: 25px 0;
+	padding: 25px 100px;
 	background: $light-grey-bg;
 	border-radius: 4px;
 }
@@ -15,7 +19,6 @@
 	font-size: 14px;
 	line-height: 1.15;
 	text-transform: uppercase;
-	text-align: center;
 	margin-top: 30px;
 }
 .peculiarities__text {

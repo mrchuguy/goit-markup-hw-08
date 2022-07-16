@@ -1,0 +1,24 @@
+.activity__list {
+	display: flex;
+	flex-basis: 100%;
+	gap: 30px;
+}
+.activity__item {
+	position: relative;
+}
+.activity__overlay {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 27px 0;
+	background: rgba(47, 48, 58, 0.8);
+}
+.activity__subtitle {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $white;
+}
