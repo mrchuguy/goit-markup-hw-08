@@ -1,0 +1,56 @@
+.menu {
+	display: flex;
+
+	@media screen and (min-width: $bp-tablet) {
+		align-items: center;
+	}
+
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $white;
+		width: 100%;
+		min-width: 320px;
+		height: 100%;
+		min-height: 796px;
+		z-index: 1;
+		padding: 48px 40px;
+
+		&.is-open {
+			display: block;
+		}
+	}
+}
+.menu__button {
+	display: none;
+
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		display: block;
+		position: absolute;
+		z-index: 2;
+		right: 15px;
+		top: 10px;
+		border: none;
+		background-color: transparent;
+	}
+}
+
+.menu__icon {
+	&:hover,
+	&:focus {
+		fill: $hover-link-color;
+	}
+}
+.icon-cross {
+	display: none;
+
+	.menu__button.is-open & {
+		display: block;
+	}
+}
+
+.menu__button.is-open .icon-menu {
+	display: none;
+}

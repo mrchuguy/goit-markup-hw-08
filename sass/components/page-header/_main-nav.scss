@@ -1,14 +1,46 @@
 .main-nav {
 }
 .main-nav__list {
+	@media screen and (min-width: $bp-tablet) {
+		display: flex;
+		gap: 50px;
+	}
+}
+.main-nav__item {
+	@media screen and (max-width: calc($bp-tablet - 1px)) {
+		&:not(:first-child) {
+			margin-top: 30px;
+		}
+	}
 }
 .main-nav__link {
-	display: block;
+	display: inline-block;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
+	font-size: 40px;
+	line-height: 1.18;
 	letter-spacing: 0.02em;
+
+	@media screen and (min-width: $bp-tablet) {
+		font-size: 14px;
+		line-height: 1.14;
+		padding: 32px 0;
+	}
 }
 .main-nav__link--current {
 	color: $hover-link-color;
+
+	@media screen and (min-width: $bp-tablet) {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: $hover-link-color;
+			border-radius: 2px;
+		}
+	}
 }
