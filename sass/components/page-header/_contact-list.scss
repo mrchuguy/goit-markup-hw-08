@@ -51,7 +51,7 @@
 .contact-list__link--accent {
 	@media screen and (max-width: calc($bp-tablet - 1px)) {
 		font-size: 40px;
-		display: block;
+		display: inline-block;
 		line-height: 1.18;
 		color: $hover-link-color;
 		margin-bottom: 32px;

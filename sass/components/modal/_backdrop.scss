@@ -7,7 +7,7 @@
 	left: 0;
 	opacity: 1;
 	overflow-y: scroll;
-	transition: opacity $anim-dur $anim-func;
+	transition: opacity $anim-dur $anim-func, visibility $anim-dur $anim-func;
 
 	@media screen and (max-width: calc($bp-tablet - 1px)) {
 		padding: 93px 15px;
