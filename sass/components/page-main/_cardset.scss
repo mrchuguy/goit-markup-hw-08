@@ -1,11 +1,15 @@
 .cardset {
-	margin-top: 50px;
+	margin-top: 30px;
 	list-style-type: none;
 
 	@media screen and (min-width: $bp-tablet) {
 		display: flex;
 		flex-wrap: wrap;
 		gap: $indent;
+	}
+
+	@media screen and (min-width: $bp-desktop) {
+		margin-top: 50px;
 	}
 }
 .cardset__item {

@@ -1,24 +1,26 @@
 .menu {
+	display: flex;
+
 	@media screen and (min-width: $bp-tablet) {
-		display: flex;
 		align-items: center;
 	}
 
 	@media screen and (max-width: calc($bp-tablet - 1px)) {
-		position: absolute;
+		flex-direction: column;
+		justify-content: space-between;
+		position: fixed;
+		overflow-y: scroll;
 		top: 0;
 		left: 0;
 		background-color: $white;
-		width: 100%;
+		width: 100vw;
 		min-width: 320px;
-		height: 100%;
-		min-height: 796px;
+		height: 100vh;
 		z-index: 1;
 		padding: 48px 40px;
 		transform: scaleY(0);
 		transform-origin: top;
-		visibility: hidden;
-		transition: transform $anim-dur $anim-func, visibility $anim-dur $anim-func;
+		transition: transform 100ms $anim-func, visibility 100ms $anim-func;
 
 		&.is-open {
 			visibility: visible;
@@ -34,9 +36,13 @@
 		position: absolute;
 		z-index: 2;
 		right: 15px;
-		top: 10px;
+		top: 0;
 		border: none;
 		background-color: transparent;
+	}
+	&.is-open {
+		position: fixed;
+		top: 10px;
 	}
 }
 
@@ -49,7 +55,7 @@
 .icon-cross {
 	transform: scale(0);
 	transform-origin: center;
-	transition: transform $anim-dur $anim-func;
+	transition: transform 100ms $anim-func;
 
 	.menu__button.is-open & {
 		transform: scale(1);
@@ -59,7 +65,7 @@
 .icon-menu {
 	transform: scale(1);
 	transform-origin: center;
-	transition: transform $anim-dur $anim-func;
+	transition: transform 100ms $anim-func;
 
 	.menu__button.is-open & {
 		transform: scale(0);

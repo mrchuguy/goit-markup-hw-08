@@ -2,7 +2,7 @@
 	background: $dark-bg;
 	padding: 60px 0;
 
-	@media screen and (max-width: calc($bp-tablet - 1px)) {
+	@media screen and (max-width: calc($bp-desktop - 1px)) {
 		text-align: center;
 	}
 }
